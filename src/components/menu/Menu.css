@@ -1,6 +1,9 @@
 .menu-container{
-    width: 400px;
+    width: 331px;
     height: 100vh;
 
-    background: rgb(120, 120, 120);
+    background: #E1E1E0;
+}
+h3{
+    background: #BABABAB2;
 }
