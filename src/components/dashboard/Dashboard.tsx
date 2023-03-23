@@ -1,7 +1,10 @@
-import React from 'react'
-
+import React from "react";
+import "./Dashboard.css";
+import WidgetContainer from "./widget/WidgetContainer";
 export default function Dashboard() {
   return (
-    <div>dashboard</div>
-  )
+    <div className="dashboard-container">
+      <WidgetContainer />
+    </div>
+  );
 }
