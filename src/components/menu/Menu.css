@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 .menu-container{
     width: 331px;
@@ -12,7 +11,14 @@ h3{
     background: #BABABAB2;
 }
 .h3-left{
+    padding: 5px;
     text-align: left;
     cursor: pointer;
     user-select: none;
+}
+.bottom-svg-img{
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
