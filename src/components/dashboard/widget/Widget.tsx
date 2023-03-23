@@ -20,19 +20,34 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-export default function Widget({}: {
+
+export default function Widget({
+  Title,
+  Info,
+  Unit,
+}: {
   Title: string;
   Info: string;
   Unit: string;
 }) {
   return (
     <div className="container">
-      <h2>Air Pressure:</h2>
+      <h2>{Title}</h2>
       <div className="main-content">
         <div>
-          <div>Pressure</div>
+          <div>{Info}</div>
           <div>PA</div>
-          <LineGraph />
+          <LineGraph
+            dataSet={[
+              Math.random(),
+              Math.random(),
+              Math.random(),
+              Math.random(),
+              Math.random(),
+              Math.random(),
+              Math.random(),
+            ]}
+          />
         </div>
       </div>
     </div>

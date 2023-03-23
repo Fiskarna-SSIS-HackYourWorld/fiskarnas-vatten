@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import Infoboard from "./Inforboard";
 import React, { useState, useEffect } from "react";
 import Widget from "./Widget";
 import "./WidgetContainer.css";
@@ -8,12 +10,21 @@ function useQuery() {
 }
 
 export default function WidgetContainer() {
+
+  const [automaticWatering, setAutomaticWatering] = useState<boolean>(true);
   const query = useQuery();
   const [index, setIndex] = useState(query.get("index"));
 
   useEffect(() => {
     setIndex(query.get("index"));
   }, [query]);
+
+  function toggle(ev: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    ev.preventDefault();
+    automaticWatering
+      ? setAutomaticWatering(false)
+      : setAutomaticWatering(true);
+  }
 
   return (
     <div className="widget-container">
@@ -22,7 +33,12 @@ export default function WidgetContainer() {
         <Widget Title="Air pressure" Info="Pressure" Unit="PA" />
         <Widget Title="Humidity" Info="Humidity" Unit="(%)" />
         <Widget Title="Temperature" Info="Temp" Unit="C*" />
-        <Widget Title="Information" Info=" " Unit=" " />
+        <Infoboard />
+        {automaticWatering ? (
+          <button onClick={(ev) => toggle(ev)}>Automatic Watering: ON</button>
+        ) : (
+          <button onClick={(ev) => toggle(ev)}>Automatic Watering: OFF</button>
+        )}
       </div>
     </div>
   );
