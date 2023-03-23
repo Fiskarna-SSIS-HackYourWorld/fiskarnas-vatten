@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import Infoboard from "./Inforboard";
 import React, { useState, useEffect } from "react";
+import Infoboard from "./Inforboard";
 import Widget from "./Widget";
 import "./WidgetContainer.css";
 import { useLocation } from "react-router-dom";
