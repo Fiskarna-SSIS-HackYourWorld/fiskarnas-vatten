@@ -1,7 +1,5 @@
 .dashboard-container {
-  width: 100%;
+  width: 1104px;
   max-height: 100vh;
-
   padding: 50px;
-  background-color: blue;
 }
