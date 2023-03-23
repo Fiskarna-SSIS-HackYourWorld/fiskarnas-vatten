@@ -2,14 +2,20 @@ import React, { useState } from "react";
 import "./Widget.css";
 import { Line } from "react-chartjs-2";
 
-export default function Widget() {
+interface IWidget{
+  Title: string,
+  Info: string,
+  Unit: string
+}
+
+export default function Widget(props : IWidget) {
   return (
     <div className="container">
-      <h2>Air Pressure:</h2>
+      <h2>{props.Title}:</h2>
       <div className="main-content">
         <div style={{width:"70px"}}>
-          <div>Pressure</div>
-          <div>PA</div>
+          <div>{props.Info}</div>
+          <div>{props.Unit}</div>
         </div>
         <div>
           för i helvete
