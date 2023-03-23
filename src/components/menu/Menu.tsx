@@ -1,13 +1,28 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Systems from '../systems/Systems';
 import "./Menu.css"
 import myImage from './plantan.png';
 
 
 export default function Menu() {
+  const [showSystems, setShowSystems] = useState(false);
+
+
+  function show (){
+    showSystems ? setShowSystems(false) : setShowSystems(true)
+  }
   return (
       <div className='menu-container'>
         <img src={myImage} alt="" />
-        <h3>fiskarnas water system</h3>
+        <div style={{padding: "20px", display: "flex", flexDirection: "column"}}> 
+          <h3 style={{marginBottom: "20px"}}>fiskarnas water system</h3>
+          <h3 className='h3-left' onClick={show}>Systems</h3>
+          {showSystems &&
+            <div style={{width: "100%", display: "flex", justifyContent: "right"}}>
+                <Systems />
+            </div>
+          }
+        </div>
       </div>
   )
 }

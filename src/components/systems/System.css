@@ -1,0 +1,13 @@
+.system-container{
+    /* width: fit-content; */
+    padding: 20px;
+    background: #BABABAB2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.system-item{
+    background: #D9D9D980;
+    width: 130px;
+    text-align: left;
+}

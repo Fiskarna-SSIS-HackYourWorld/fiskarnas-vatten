@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 .menu-container{
     width: 331px;
     height: 100vh;
@@ -5,5 +7,12 @@
     background: #E1E1E0;
 }
 h3{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
     background: #BABABAB2;
+}
+.h3-left{
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
 }
