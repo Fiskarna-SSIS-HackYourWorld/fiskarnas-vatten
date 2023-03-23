@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import Systems from '../systems/Systems';
 import "./Menu.css"
-import myImage from './plantan.png';
+import plantImg from './plantan.png';
+import group1 from './Group.png'
 
 
 export default function Menu() {
@@ -13,7 +14,7 @@ export default function Menu() {
   }
   return (
       <div className='menu-container'>
-        <img src={myImage} alt="" />
+        <img src={plantImg} alt="" />
         <div style={{padding: "20px", display: "flex", flexDirection: "column"}}> 
           <h3 style={{marginBottom: "20px"}}>fiskarnas water system</h3>
           <h3 className='h3-left' onClick={show}>Systems</h3>
@@ -23,6 +24,7 @@ export default function Menu() {
             </div>
           }
         </div>
+        <img className='bottom-svg-img' src={group1} alt="" />
       </div>
   )
 }

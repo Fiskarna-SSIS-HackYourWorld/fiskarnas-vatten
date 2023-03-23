@@ -1,13 +1,23 @@
 .system-container{
+    z-index: 1;
     /* width: fit-content; */
     padding: 20px;
     background: #BABABAB2;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    overflow-y: scroll;
+    overflow-x: none;
+    height: 370px;
 }
 .system-item{
-    background: #D9D9D980;
+    z-index: 1;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    /* background: #D9D9D980; */
+    padding: 20px;
     width: 130px;
     text-align: left;
 }
