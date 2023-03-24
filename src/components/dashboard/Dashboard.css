@@ -1,0 +1,23 @@
+.dashboard-container {
+  font-family: 'Inter', sans-serif;
+
+  width: 1104px;
+  max-height: 100vh;
+  padding: 50px;
+}
+.top-left-group{
+
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 250px;
+}
+.bottom-right-group{
+
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+
