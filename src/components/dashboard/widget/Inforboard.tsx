@@ -9,18 +9,21 @@ export default function Infoboard() {
     "Snake",
     "Arkaden",
     "Monopoly",
-    "Plocke pin",
+    "Plocke pinn",
+    "Donkey Kong",
+    "Datorklubben",
+    "Pac-man"
   ];
   useEffect(() => {
     setPing(randomIntegerNum(3, 20));
-    setActiveLocation(randomIntegerNum(0, locations.length - 1));
-  }, []);
+    setActiveLocation(randomIntegerNum(1, locations.length - 1));
+  });
   function randomIntegerNum(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
   return (
     <div className="container">
-      <h2>Infor Board</h2>
+      <h2>Info Board</h2>
       <div className="main-content">
         <div>
           <div>Last ping: {ping}ms</div>

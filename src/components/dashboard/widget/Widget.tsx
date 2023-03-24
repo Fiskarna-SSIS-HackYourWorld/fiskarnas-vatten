@@ -36,7 +36,7 @@ export default function Widget({
       <div className="main-content">
         <div>
           <div>{Info}</div>
-          <div>PA</div>
+          <div>{Unit}</div>
           <LineGraph
             dataSet={[
               Math.random(),
